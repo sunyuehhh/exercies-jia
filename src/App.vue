@@ -1,17 +1,18 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <Form></Form>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Form from "./components/form/index.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    Form,
   },
+  mounted() {},
 };
 </script>
 
