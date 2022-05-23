@@ -1,19 +1,5 @@
 <template>
-  <div id="app">
-    <Form></Form>
-  </div>
+  <div id="app">11111111</div>
 </template>
-
-<script>
-import Form from "./components/form/index.vue";
-
-export default {
-  name: "App",
-  components: {
-    Form,
-  },
-  mounted() {},
-};
-</script>
 
 <style></style>

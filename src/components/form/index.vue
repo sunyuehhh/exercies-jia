@@ -18,6 +18,8 @@
 import KInput from "./KInput.vue";
 import KFormItem from "./KFormItem.vue";
 import KForm from "./KForm.vue";
+import Notice from "../Notice";
+import create from "@/utils/create";
 export default {
   components: {
     KInput,
@@ -39,12 +41,25 @@ export default {
 
   methods: {
     onLogin() {
+      // 创建弹窗的实例
+      let notice;
       this.$refs.loginForm.validate((isValid) => {
         if (isValid) {
-          alert("登录");
+          // alert("登录");
+          notice = create(Notice, {
+            title: "xxx",
+            message: "登录",
+            duration: 1000,
+          });
         } else {
-          alert("有错");
+          // alert("有错");
+          notice = create(Notice, {
+            title: "xxx",
+            message: "有错",
+            duration: 1000,
+          });
         }
+        notice.show();
       });
     },
   },
